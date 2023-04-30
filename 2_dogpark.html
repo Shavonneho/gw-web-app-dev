@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Locations to Unleash- DMV Web-Woofers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/paw.png" target="_blank" href="https://icons8.com/icon/19439/dog-paw">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#map_key {
+				margin: auto;
+				width: 30%;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.035);
+			}
+			ul.mapkey {
+				display: inline-block;
+			}
+			#map {
+				margin: auto;
+				margin-top: 10px;
+				width: 80%;
+				height: 600px;
+				background-color: grey;
+			}
+			.iconscredit {
+				text-align: center;
+				font-size: 80%;
+			}
+	 </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="1_home.html">DMV Web-Woofers</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+                      <li><a href="1_home.html">Home</a></li>
+                      <li><a href="2_dogpark.html">Locations to Unleash</a></li>
+                      <li><a href="3_tricks.html">Tips and Tricks</a></li>
+                      <li><a href="4_shelter.html">Shelter Resources</a></li>
+                      <li><a href="5_communities.html">Our Communities</a></li>
+                      <li><a href="1_home.html#three">Contact Us</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Locations to Unleash</h2>
+							<p>Dog Parks, Veterinary Care and Bark Parks</p>
+						</header>
+
+
+						<section class="wrapper style5">
+							<div class="inner">
+                <h3>Unleash &amp; Paw-five</h3>
+                  <p><span class="image left"><img src="images/dogpark-pic-01-park.jpg" alt="" /></span>A dog park is designated area within a park where dogs area allowed to run, play, and socialize off-leash in a safe and controlled environment. <br /><br />These area ensure the safety of the dogs with fenced-in areas and privde a great opportunity for dogs to exercise, socialize with other dogs, and release energy in a controlled environment.</p> <br /><br />
+
+                  <p><span class="image right"><img src="images/dogpark-pic-02-vet.jpg" alt="" /></span>Veterinary care refers to the medical treatment and management of animals. <br /><br /> Some common care for pets include annual check-ups, vaccinations, spaying or neutering, dental cleanings, and treatment for illnesses or injuries.</p> <br /><br />
+
+                  <p><span class="image left"><img src="images/dogpark-pic-03-bar.jpg" alt="" /></span>A bark park is a public park designed for dogs to play and socialize off-leash. They also provide a place for dog owners to meet and socialize with other dog owners, creating a sense of community among the pet owners.</p><br /><br /><br />
+
+
+								<hr />
+
+								<h3>Map to Navigate</h3>
+
+								<div id="map_key">
+									<h6 style="padding-top: 30px;">Map Key</h6>
+									<ul class="mapkey">
+										<li style="list-style-image: url(images/dog.png);">Dog Park</li>
+										<li style="list-style-image: url(images/vet.png);">Veterinarian</li>
+										<li style="list-style-image: url(images/drinks.png); margin-top: 10px;">Bark Park (zoom out!)</li>
+									</ul>
+									<p style="font-size: 80%; padding-bottom: 20px;">Click on an icon in the map to learn more</p>
+								</div>
+
+			    	<div id="map"></div>
+				    <script>
+
+				      function initMap() {
+				        //adding dog parks as variables
+				        var dogparks = [
+				          //DC Dog Parks
+				           ["Swampoodle Park", 38.90373466074866, -77.00229347366552, "https://g.co/kgs/EitzYG", "dogpark"],
+				           ["Bundy Dog Park", 38.90961543371471, -77.01806082412195, "https://g.co/kgs/9CYSVo", "dogpark"],
+				           ["Shaw Dog Park", 38.91228514183495, -77.02613547725832, "https://www.google.com/search?q=Shaw+Dog+Park", "dogpark"],
+				           ["Newark Street Dog Park", 38.93485209063074, -77.07664490054883, "https://g.co/kgs/vRBXR1", "dogpark"],
+				           ["Glencarlyn Dog Park", 38.86216732390669, -77.1172251447293, "https://g.co/kgs/3Ca91t", "dogpark"],
+				           ["Langdon Dog Park", 38.92675764923123, -76.97401657356315, "https://g.co/kgs/nasvJ9", "dogpark"],
+				           ["S Street Dog Park", 38.914538178209334, -77.0387726023023, "https://g.co/kgs/y4vxqg", "dogpark"],
+				           ["Rosedale Conservancy", 38.93483878387863, -77.06871601533591, "https://g.co/kgs/bpVeQg", "dogpark"],
+				           ["Kingsman Field Dog Park", 38.89541352955424, -76.9866941576529, "https://g.co/kgs/jNm22P", "dogpark"],
+				           ["Eckington Dog Park", 39.05231438445296, -77.11760420734248, "https://g.co/kgs/i6vUiv", "dogpark"],
+				           //VA Dog Parks
+				           ["Shirlington Dog Park", 38.84368835801606, -77.09042880251944, "https://g.co/kgs/CzUrwh", "dogpark"],
+				           ["James Hunter Dog Park", 38.888536093491425, -77.09637389998468, "https://g.co/kgs/g81Dg8", "dogpark"],
+				           ["Towers Park", 38.86698294744811, -77.07671457908678, "https://g.co/kgs/AhN4qY", "dogpark"],
+				           ["Utah Dog Park", 38.83994222051867, -77.08631214454776, "https://g.co/kgs/KaLsXv", "dogpark"],
+				           ["Barkhaus", 38.82513590000795, -77.05056823524387, "https://g.co/kgs/1WnoCZ", "dogpark"],
+				           ["Benjamin Banneker Dog Park", 38.882388884032835, -77.15554583637875, "https://g.co/kgs/oz6MVo", "dogpark"],
+				           ["Westgrove Dog Park", 38.76946078212482, -77.05880259813243, "https://g.co/kgs/SGWDAV", "dogpark"],
+				           ["Fort Ethan Allen Park", 38.924651755339156, -77.12426215340388, "https://www.google.com/search?q=Fort+Ethan+Allen+Dog+Park", "dogpark"],
+				           //MD Dog Parks
+				           ["Waggertail Dog Park", 38.96640796585139, -76.92605356930372, "https://g.co/kgs/zo8Fjo", "dogpark"],
+				           ["Dog Park at Cabin John Regional Park", 39.03431681133531, -77.1486948134833, "https://g.co/kgs/bp3y3x", "dogpark"],
+				           ["Ellsworth Urban Park", 39.00115638808895, -77.02388565765345, "https://g.co/kgs/Hi4Kum", "dogpark"],
+				           ["Heurich Dog Park", 38.96325819092074, -76.96897527232932, "https://g.co/kgs/zfNDGk", "dogpark"],
+				           //DC Vets
+				           ["Atlasvet", 38.90096687188591, -76.98724561534364, "https://g.co/kgs/L3DKgw", "vet"],
+				           ["Animal Clinic of Anacostia", 38.86500185775629, -76.98944160829909, "https://g.co/kgs/kSZFRP", "vet"],
+				           ["Bond Vet - Capitol Hill", 38.88630239282159, -76.99773783097613, "https://g.co/kgs/89TneZ", "vet"],
+				           ["District Veterinary Hospital Brookland", 38.93748962178756, -76.99385416951132, "https://g.co/kgs/2mwYs4", "vet"],
+				           ["P Street Pet Practice", 38.91045177629467, -77.00755941559675, "https://g.co/kgs/UhG82h", "vet"],
+				           ["District Veterinary Hospital Eastern Market", 38.88683319336164, -76.99571230808607, "https://g.co/kgs/P9h9Nv", "vet"],
+				           ["District Veterinary Hospital - Navy Yard", 38.88006673734975, -77.00424108419014, "https://g.co/kgs/c9XHWH", "vet"],
+				           ["VCA MacArthur Animal Hospital", 38.917381567069135, -77.09698010918451, "https://g.co/kgs/P6iCCY", "vet"],
+				           //VA Vets
+				           ["Northside Veterinary Clinic", 38.897649397439274, -77.10779450796622, "https://g.co/kgs/ZtWp3j", "vet"],
+				           ["Shirlington Animal Hospital", 38.841794716927986, -77.08786187726558, "https://g.co/kgs/PCHifL", "vet"],
+				           ["Clarendon Animal Care North Arlington", 38.88484969316058, -77.09237942486811, "https://g.co/kgs/WqFCRk", "vet"],
+				           ["Fairfax Veterinary Hospital", 38.849398250387324, -77.303391861929, "https://g.co/kgs/KDNJvw", "vet"],
+				           ["Ballston Animal Hospital", 38.87759197593065, -77.1236091550355, "https://g.co/kgs/ZUcYAV", "vet"],
+				           ["EMMAvet", 38.77727822360689, -77.06099411588524, "https://g.co/kgs/yEjyJX", "vet"],
+				           ["Town & Country Animal Hospital", 38.882660579790475, -77.25165218615321, "https://www.google.com/search?q=Town+%26+Country+Animal+Hospital", "vet"],
+				           ["McLean Animal Hospital", 38.93923090770461, -77.17633801534039, "https://www.google.com/search?q=McLean+Animal+Hospital", "vet"],
+				           //MD Vets
+				           ["College Park Animal Hospital", 39.01540165411573, -76.92710585397624, "https://g.co/kgs/TtPFCR", "vet"],
+				           ["Prince George's Animal Hospital", 38.94976230299137, -76.88760530794751, "https://g.co/kgs/9kzY1P", "vet"],
+				           ["Oakcrest Veterinary Clinic", 38.863499653762325, -76.91236716933075, "https://g.co/kgs/V3wheZ", "vet"],
+				           ["Silver Spring Animal Hospital", 39.02820042107557, -77.0709760232973, "https://g.co/kgs/xUJ1ok", "vet"],
+				           ["Riverdale Park Animal Hospital", 38.96024037808111, -76.91845415398747, "https://g.co/kgs/cvyUgX", "vet"],
+				           ["Olney-Sandy Spring Veterinary Hospital", 39.17549468773475, -77.0340570471004, "https://g.co/kgs/v54Pn9", "vet"],
+				           ["Lynn Animal Hospital", 38.96811344499104, -76.93728635151024, "https://www.google.com/search?q=Lynn+Animal+Hospital", "vet"],
+				           //DC Social
+				           ["Barkhaus", 38.82513590000795, -77.05056823524387, "https://g.co/kgs/1WnoCZ", "social"],
+				           //MD Social
+				           ["Bark Social", 39.05224773079652, -77.11717505389642, "https://www.google.com/search?q=Bark+Social", "social"]
+
+				         ];
+
+
+								 const images = {
+ 									dogpark: {
+ 										icon: 'images/dog.png',
+ 									},
+ 									social: {
+ 										icon: 'images/drinks.png',
+ 									},
+ 									vet: {
+ 										icon: 'images/vet.png',
+ 									}
+ 								};
+
+				        //center of DC - used for map
+				        var macc = {lat: 38.9072, lng: -77.0369};
+
+				        //creating map
+				        var map = new google.maps.Map(
+
+				            document.getElementById('map'), {zoom: 12, center: macc}
+
+				        );
+
+				        var infowindow = new google.maps.InfoWindow;
+
+				        var marker, i;
+
+				        //adding dog park markers to map
+				        for (i = 0; i < dogparks.length; i++) {
+
+				          var marker = new google.maps.Marker({
+				            position: new google.maps.LatLng(dogparks[i][1], dogparks[i][2]),
+				            map: map,
+				            icon: images[dogparks[i][4]].icon,
+				          });
+
+				          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+				            return function() {
+				               infowindow.setContent('<a href="' + dogparks[i][3] + '" target="_blank">' + dogparks[i][0] + '</a>');
+				               infowindow.open(map, marker);
+				              }
+				          })(marker, i));
+
+				        }
+
+				      }
+
+							</script>
+
+ 						 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ZCWSfugfzg_9Bz5TRx57Ti7fRp3RGYY&callback=initMap"></script>
+
+ 						 <hr />
+
+					</div>
+					<div class="iconscredit">
+						<p style="margin-bottom: 0px;">Map icons courtesy of Icons8</p>
+						<a target="_blank" href="https://icons8.com/icon/GZSZiebXkvbw/dog-jump">Dog Jump</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+						<a target="_blank" href="https://icons8.com/icon/10967/wine-bar">Wine Bar</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+						<a target="_blank" href="https://icons8.com/icon/pIc0zjvIlsbQ/veterinarian">Veterinarian</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+					</div>
+					</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="1_home.html#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; DMV Web-Woofers</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li><a target="_blank" href="https://icons8.com/icon/19439/dog-paw">Dog Paw</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a><br>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
